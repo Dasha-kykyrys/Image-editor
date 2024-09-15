@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Image Editor</title>
+		<meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+	</head>
+    <body>
+        <div class="container disable">
+            <div class="tabs-buttons">
+                <button id="settings" class="active">Settings</button>
+                <button id="crop">Crop</button>
+                <button id="add">Add</button>
+            </div>
+            <div class="wrapper">
+                <div class="editor-panel">
+                    <div class="slider">
+                        <div class="brightness">
+                            <div class="info">
+                                <p class="name">Brigtness</p>
+                                <p class="value">100%</p>
+                            </div>
+                            <input type="range" value="100" min="0" max="200">
+                        </div>
+                        <div class="contrast">
+                            <div class="info">
+                                <p class="name">Contrast</p>
+                                <p class="value">100%</p>
+                            </div>
+                            <input type="range" value="100" min="0" max="200">
+                        </div>
+                        <div class="saturation">
+                            <div class="info">
+                                <p class="name">Saturation</p>
+                                <p class="value">100%</p>
+                            </div>
+                            <input type="range" value="100" min="0" max="200"> 
+                        </div>
+                    </div>
+                    <div class="crop disable">
+                        <button id="crop" class="active">Crop</button>
+                        <button id="resize">Resize</button>
+                        <div class="function">
+                            <div class="crop-function">
+                                <button id="1:1" class="active">1:1</button>
+                                <button id="16:9">16:9</button>
+                                <button id="4:3">4:3</button>
+                            </div>
+                            <div class="resize-function disable">
+                                <p>Height</p>
+                                <input type="text" class="height">
+                                <p>Weight</p>
+                                <input type="text" class="width">
+                                <button>Done</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="add disable">
+                    </div>
+                </div>
+                <div class="image">
+                    <img src="image-placeholder.svg" alt="image">
+                </div>
+            </div>
+            <div class="control-image">
+                <button class="reset">Reset</button>
+                <div class="row">
+                    <input type="file" class="file-img" accept="image/jpeg,image/png" hidden>
+                    <button class="choose">Choose</button>
+                    <button class="save">Save</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,180 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #8671b6;
+}
+.container{
+    width: 850px;
+    background: #b19ae6;
+    border-radius: 10px;
+    padding: 30px 35px 35px;
+}
+
+.container.disable :where(.editor-panel, .reset, .save, .tabs-buttons) {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.container .wrapper{
+    display: flex;
+    margin: 20px 0;
+    min-height: 335px;
+}
+
+/*Кнопки вкладок*/
+
+.tabs-buttons button{
+    background: #c0adec;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 11px 20px;
+    border: 2px solid #48396a;
+    border-radius: 5px;
+    color: #48396a;
+    text-transform: uppercase;
+}
+
+.wrapper .editor-panel{
+    width: 280px;
+    padding: 15px 20px;
+    border: 2px solid #48396a;
+    background: #c0adec;
+    border-radius: 5px;
+    display: grid;
+}
+
+.control-image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*Слайдеры*/
+
+.editor-panel .slider.disable{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.editor-panel .slider{
+    grid-area: 1 / 1;
+}
+
+.editor-panel .slider .info{
+    display: flex;
+    font-size: 14px;
+    color: #48396a;
+    justify-content: space-between;
+}
+
+.editor-panel .slider input{
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    accent-color: #48396a;
+}
+
+/*Изменение размеров изображения*/
+
+.editor-panel .crop.disable{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.editor-panel .crop{
+    grid-area: 1 / 1;
+}
+
+.editor-panel .crop button{
+    background: #c0adec;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 11px 20px;
+    border: 2px solid #48396a;
+    border-radius: 5px;
+    color: #48396a;
+    text-transform: uppercase;
+    width: calc(100% / 2 - 4px);
+}
+
+.crop .function{
+    display: grid;  
+}
+
+/*Функция обрезки*/
+
+.function .crop-function{
+    grid-area: 1 / 1;
+}
+
+.function .crop-function.disable{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.crop-function button{
+    display: flex;
+    margin-top: 10px;
+}
+
+/*Функция изменения размера*/
+
+.function .resize-function{
+    grid-area: 1 / 1; 
+}
+
+.function .resize-function.disable{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.resize-function button, input{
+    margin-top: 10px;  
+}
+
+.resize-function p{
+    font-size: 14px;
+    color: #48396a;
+}
+
+/*Добавления на изображения*/
+
+.editor-panel .add.disable{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.editor-panel .add{
+    grid-area: 1 / 1;
+}
+
+.wrapper .image{
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;   
+}
+
+.image img{
+    max-width: 490px;
+    max-height: 335px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.control-image button{
+    background: #c0adec;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 11px 20px;
+    border: 2px solid #48396a;
+    border-radius: 5px;
+    color: #48396a;
+    text-transform: uppercase;
+}
